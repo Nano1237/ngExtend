@@ -1,0 +1,29 @@
+{
+  "name": "ngExtend",
+  "version": "1.0.0",
+  "description": "Extends the default AngularJS Module with useful Services, Filters and Directives",
+  "author": "Tim Ruecker <tim.ruecker@ymail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nano1237/ngExtend.git"
+  },
+  "keywords": [
+    "angularjs",
+    "extend",
+    "library"
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "bower": "",
+    "grunt-contrib-jshint": "~0.11.2",
+    "grunt-contrib-concat": "~0.5.1",
+    "grunt-closure-compiler": "~0.0.21",
+    "grunt-karma": "~0.10.1",
+    "karma-jasmine": "~0.1.5",
+    "karma-firefox-launcher": "~0.1.6",
+    "jshint-stylish": "~1.0.2",
+    "karma": "~0.12.32"
+  },
+  "private": false,
+  "license": "MIT"
+}
