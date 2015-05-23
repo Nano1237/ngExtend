@@ -75,13 +75,15 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-
     grunt.registerTask('default', [
+        'justbuild',
+        'karma'
+    ]);
+
+    grunt.registerTask('justbuild', [
         'jshint',
         'concat',
-        'closure-compiler',
-        'karma'
+        'closure-compiler'
     ]);
 
 };

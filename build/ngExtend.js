@@ -25,7 +25,7 @@ function toFixedFilter($log) {
             $log.error('xt.toFixed: input is typeof ' + typeof input);
             return input;
         }
-        input = input + '';
+        input = +input;
         x = x || 0;
         return input.toFixed(x);
     };
