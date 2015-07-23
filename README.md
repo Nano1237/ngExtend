@@ -6,15 +6,15 @@ Extends the default AngularJS Module with useful Services, Filters and Directive
 
 ###Bower
 
-You can use bower with `bower install ngExtend`
+You can use bower with `$bower install ngExtend`
 
 ###Clone
 
-You can clone this repo with `git clone https://github.com/Nano1237/ngExtend.git`
+You can clone this repo with `$git clone https://github.com/Nano1237/ngExtend.git`
 
 ###Include rawgit
 
-You can include the raw js file with `<script src="https://rawgit.com/Nano1237/ngExtend/ngExtend.min.js"></script>`
+You can include the raw js file with `<script src="https://rawgit.com/Nano1237/ngExtend/ngExtend.min.js"></script>` *(not recommended, because of XSS vulnerability)*
 
 
 ##Usage
