@@ -21,7 +21,7 @@ You can include the raw js file with `<script src="https://rawgit.com/Nano1237/n
 
 Require the Module
 
-```
+```javascript
 angular.module('myModule', [
     'ngExtend'
 ]);
@@ -45,8 +45,8 @@ Just add the `xt-src-err` Property to any `<img>` Tag you want.
 
 ###toFixed
 
-This Filter just calls the `.toFixed()` Method of Strings.
-If you pas a Number, the it will be transformed into a string.
+This Filter just calls the `.toFixed()` Method of Numbers.
+If you pass a String, then it will be transformed into a Number.
 
 ####Usage
 
