@@ -55,7 +55,7 @@ module.exports = function (grunt) {
                 compilerFile: 'node_modules/closure-compiler/lib/vendor/compiler.jar',
                 compilerOpts: {
                     compilation_level: 'ADVANCED_OPTIMIZATIONS',
-                    externs: ['bower_components/cc-angular-externs/index.js', '<%= pkg.name %>.extern.js']
+                    externs: ['bower_components/cc-angular-externs/index.js', '<%= pkg.name %>.externs.js']
                 }
             },
             main: {

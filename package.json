@@ -1,6 +1,6 @@
 {
   "name": "ngExtend",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Extends the default AngularJS Module with useful Services, Filters and Directives",
   "author": "Tim Ruecker <tim.ruecker@ymail.com>",
   "repository": {

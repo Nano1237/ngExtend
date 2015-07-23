@@ -1,7 +1,7 @@
 {
   "name": "ngExtend",
   "description": "An extending Module with useful Services, Filters and Directives",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "moduleType": "amd",
   "authors": [
     "Tim Ruecker <tim.ruecker@ymail.com>"
@@ -10,6 +10,7 @@
   "ignore": [
     "bower_components",
     "node_modules",
+    "demo",
     "src",
     "tests",
     "Gruntfile.js",
