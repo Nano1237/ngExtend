@@ -1,0 +1,5 @@
+[
+  "src/xt/filter/*.js",
+  "src/xt/directive/*.js",
+  "src/xt/index.js"
+]
