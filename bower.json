@@ -1,8 +1,30 @@
 {
   "name": "ngExtend",
-  "version": "1.0.0",
+  "description": "An extending Module with useful Services, Filters and Directives",
+  "version": "0.1.0",
+  "moduleType": "amd",
+  "authors": [
+    "Tim Ruecker <tim.ruecker@ymail.com>"
+  ],
+  "licence": "MIT",
+  "ignore": [
+    "bower_components",
+    "node_modules",
+    "src",
+    "tests",
+    "Gruntfile.js",
+    "ngExtend.externs.js"
+  ],
+  "keywords": [
+    "angularjs",
+    "angular",
+    "filter",
+    "directives",
+    "services"
+  ],
   "devDependencies": {
     "angular-mocks": "~1.0.7",
-    "angular": ""
+    "angular": "1.0.8",
+    "cc-angular-externs": "https://raw.githubusercontent.com/google/closure-compiler/master/contrib/externs/angular-1.2.js"
   }
 }

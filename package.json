@@ -1,6 +1,6 @@
 {
   "name": "ngExtend",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Extends the default AngularJS Module with useful Services, Filters and Directives",
   "author": "Tim Ruecker <tim.ruecker@ymail.com>",
   "repository": {
@@ -13,8 +13,10 @@
     "library"
   ],
   "devDependencies": {
+    "closure-compiler": "0.2.6",
     "grunt": "~0.4.5",
     "bower": "",
+    "grunt-closure-tools": "0.9.9",
     "grunt-contrib-jshint": "~0.11.2",
     "grunt-contrib-concat": "~0.5.1",
     "grunt-closure-compiler": "~0.0.21",
