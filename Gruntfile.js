@@ -1,22 +1,17 @@
 module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-closure-compiler');
+    grunt.loadNpmTasks('grunt-closure-tools');
     grunt.loadNpmTasks('grunt-karma');
     //
     //
     //
-    var mergeJsFiles = [
-        'src/xt/filter/*.js',
-        'src/xt/directive/*.js',
-
-
-        'src/xt/index.js'//always the last file
-    ];
+    var mergeJsFiles = grunt.file.readJSON('ngExtendFiles.json');
     //
     //
     //
     grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
         karma: {
             frameworks: ['jasmine'],
             options: {
@@ -39,13 +34,13 @@ module.exports = function (grunt) {
         },
         concat: {
             options: {
-                banner: '(function(angular){\n',
-                footer: '\n})(angular);',
+                banner: '/**\n* @preserve Copyright 2015 Tim Ruecker.\n*/\n(function(window, angular, undefined){\n',
+                footer: '\n})(window, angular);',
                 separator: "\n"
             },
             dist: {
                 src: mergeJsFiles,
-                dest: 'build/ngExtend.js'
+                dest: '<%= pkg.name %>.js'
             }
         },
         jshint: {
@@ -55,35 +50,29 @@ module.exports = function (grunt) {
                 reporter: require('jshint-stylish')
             }
         },
-        'closure-compiler': {
-            frontend: {
-                closurePath: 'closure-compiler',
-                js: 'build/ngExtend.js',
-                jsOutputFile: 'build/ngExtend.min.js',
-                maxBuffer: 500,
-                options: {
-                    define: [
-                        '"--externs=angular-1.3.externs.js"',
-                        '"--externs=ngExtend.externs.js"'
-                    ],
-                    //externs:'https://raw.githubusercontent.com/google/closure-compiler/master/contrib/externs/angular-1.3.externs.js',
-
+        closureCompiler: {
+            options: {
+                compilerFile: 'node_modules/closure-compiler/lib/vendor/compiler.jar',
+                compilerOpts: {
                     compilation_level: 'ADVANCED_OPTIMIZATIONS',
-                    language_in: 'ECMASCRIPT5_STRICT'
+                    externs: ['bower_components/cc-angular-externs/index.js', '<%= pkg.name %>.externs.js']
                 }
+            },
+            main: {
+                src: '<%= pkg.name %>.js',
+                dest: '<%= pkg.name %>.min.js'
             }
         }
     });
 
     grunt.registerTask('default', [
-        'justbuild',
-        'karma'
+        'justbuild'
     ]);
 
     grunt.registerTask('justbuild', [
         'jshint',
         'concat',
-        'closure-compiler'
+        'closureCompiler'
     ]);
 
 };

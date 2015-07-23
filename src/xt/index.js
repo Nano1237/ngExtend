@@ -1,6 +1,6 @@
 /* global angular */
 
-angular.module('xt', [])
+angular.module('ngExtend', [])
 
 
     .filter('toFixed', toFixedFilter)
